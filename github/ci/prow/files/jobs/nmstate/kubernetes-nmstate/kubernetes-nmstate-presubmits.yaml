@@ -61,7 +61,7 @@ presubmits:
               - "/usr/local/bin/runner.sh"
               - "/bin/sh"
               - "-c"
-              - "automation/check-patch.e2e-k8s.sh"
+              - "NMSTATE_MAX_UNAVAILABLE=1 automation/check-patch.e2e-k8s.sh"
 
     - name: pull-kubernetes-nmstate-e2e-handler-k8s-future
       skip_branches:
